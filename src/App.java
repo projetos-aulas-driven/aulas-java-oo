@@ -1,35 +1,21 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class App {
     public static void main(String[] args) {
-        // String[] receitas = { "Strogonoff", "Feijoada", "Rocambole" };
+        Receita boloChocolate = new Receita();
 
-        // for (int i = 0; i < receitas.length; i++) {
-        //     System.out.println(receitas[i]);
-        // }
+        boloChocolate.titulo = "Bolo de Chocolate";
+        boloChocolate.ingredientes = "Ovos, chocolate, farinha";
+        boloChocolate.tempoPreparo = 50;
+        boloChocolate.vegetariano = false;
+        boloChocolate.preparar();
 
-        // String[] autores = new String[3];
+        Usuario leticia = new Usuario();
+        leticia.nome = "Letícia";
+        leticia.sobrenome = "Chijo";
+        leticia.cpf = "111.111.111-11";
+        leticia.email = "leticia@gmail.com";
 
-        // autores[0] = "Edu";
-        // autores[1] = "Vagner";
-        // autores[2] = "Vivi";
+        boloChocolate.autor = leticia;
 
-        List<String> autores = new ArrayList<>();
-
-        autores.add("Edu");
-        autores.add("Vagner");
-        autores.add("Vivi");
-        autores.add("Letícia");
-
-        System.out.println(autores.get(3));
-
-        System.out.println(autores.size()); // tamanho da lista
-        System.out.println(autores.indexOf("Letícia")); // indexOf
-        System.out.println(autores.isEmpty()); // verifica se o array está vazio
-        System.out.println(autores.contains("Vagner")); // tipo o includes
-
-        autores.clear();
-        System.out.println(autores.isEmpty()); // verifica se o array está vazio
+        System.out.println(boloChocolate.autor.nome);
     }
 }

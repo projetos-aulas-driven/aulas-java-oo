@@ -1,21 +1,13 @@
 public class App {
     public static void main(String[] args) {
-        Receita boloChocolate = new Receita();
 
-        boloChocolate.titulo = "Bolo de Chocolate";
-        boloChocolate.ingredientes = "Ovos, chocolate, farinha";
-        boloChocolate.tempoPreparo = 50;
-        boloChocolate.vegetariano = false;
-        boloChocolate.preparar();
+        Usuario leticia = new Usuario("Letícia", "Chijo", "111.111.111-11", "leticia@gmail.com");
 
-        Usuario leticia = new Usuario();
-        leticia.nome = "Letícia";
-        leticia.sobrenome = "Chijo";
-        leticia.cpf = "111.111.111-11";
-        leticia.email = "leticia@gmail.com";
+        // Receita boloChocolate = new Receita("Bolo de Chocolate", "Ovos, chocolate, farinha", 50, false, leticia);
 
-        boloChocolate.autor = leticia;
+        System.out.println(leticia.getCpf());
 
-        System.out.println(boloChocolate.autor.nome);
+        leticia.setEmail("batatinha@gmail.com");
+        System.out.println(leticia.getEmail());
     }
 }

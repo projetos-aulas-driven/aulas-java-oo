@@ -1,26 +1,35 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class App {
     public static void main(String[] args) {
-        String tituloReceita = "Bolo de cenoura";
-        int quantidadeIngredientes = 2;
-        double precoVenda = 2.5;
-        final boolean vegetariana = false;
+        // String[] receitas = { "Strogonoff", "Feijoada", "Rocambole" };
 
-        // comparadores: > >= < <= == !=
-        // operadores lógicos: && || !
-        if (precoVenda > 10 && vegetariana == true) { 
-            System.out.println("Receita cara");
-        } else {
-            System.out.println("Receita barata");
-        }
+        // for (int i = 0; i < receitas.length; i++) {
+        //     System.out.println(receitas[i]);
+        // }
 
-        int quantidadeReceitas = 4;
-        while(quantidadeReceitas != 0) {
-            System.out.println("Essa é a receita " + quantidadeReceitas);
-            quantidadeReceitas -= 1;
-        }
+        // String[] autores = new String[3];
 
-        for (int qtdeReceitas = 4; qtdeReceitas != 0; qtdeReceitas--) {
-            System.out.println("Essa é a receita " + qtdeReceitas);
-        }
+        // autores[0] = "Edu";
+        // autores[1] = "Vagner";
+        // autores[2] = "Vivi";
+
+        List<String> autores = new ArrayList<>();
+
+        autores.add("Edu");
+        autores.add("Vagner");
+        autores.add("Vivi");
+        autores.add("Letícia");
+
+        System.out.println(autores.get(3));
+
+        System.out.println(autores.size()); // tamanho da lista
+        System.out.println(autores.indexOf("Letícia")); // indexOf
+        System.out.println(autores.isEmpty()); // verifica se o array está vazio
+        System.out.println(autores.contains("Vagner")); // tipo o includes
+
+        autores.clear();
+        System.out.println(autores.isEmpty()); // verifica se o array está vazio
     }
 }
